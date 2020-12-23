@@ -16,11 +16,14 @@
   background-color: #e373c8;
   transition: 1.8s ease-in-out;
   border-radius: 50%;
-  z-index: -1;
+  z-index: 6;
 }
 
 .main{
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2em;
 }
 
 /*MEDIA QUERIES*/
@@ -50,5 +53,9 @@
   .container:before {
     bottom: 72%;
     left: 50%;
+  }
+  .main{
+    flex-direction: column;
+    padding: 0;
   }
 }

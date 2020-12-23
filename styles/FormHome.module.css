@@ -1,14 +1,15 @@
 .form__container {
-  width: 30%;
-  max-width: 250px;
+  width: 350px;
   text-align: center;
 }
 .title {
   color: #5f498a;
 }
 .input__field {
+  font-size: medium;
+  font-weight: 600;
   width: 100%;
-  padding: 1em;
+  padding: 1.2em;
   margin-bottom: 2em;
   border-radius: 20px;
   background-color: aliceblue;
@@ -26,10 +27,26 @@
   background-size: 200% auto;
   color: white;
   border-radius: 15px;
+  font-size: medium;
+  font-weight: 600;
 }
 
 .btn:hover {
   background-position: right center;
   color: #fff;
   text-decoration: none;
+}
+
+/*MEDIA QUERIES*/
+/*Tablet*/
+@media (max-width: 870px) {
+}
+
+/*Movil*/
+@media (max-width: 570px) {
+  .form__container {
+    padding: 2em;
+    width: 100%;
+    max-width: 100%;
+  }
 }
