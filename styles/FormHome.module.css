@@ -37,6 +37,13 @@
   text-decoration: none;
 }
 
+.sign{
+  opacity: 0;
+}
+.log{
+
+}
+
 /*MEDIA QUERIES*/
 /*Tablet*/
 @media (max-width: 870px) {

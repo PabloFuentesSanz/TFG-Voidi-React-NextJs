@@ -3,6 +3,7 @@
   width: 100%;
   background-color: #fff;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .container:before {
@@ -19,11 +20,14 @@
   z-index: 6;
 }
 
-.main{
+
+.main {
+  height: 80vh;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 2em;
+  align-items: center;
 }
 
 /*MEDIA QUERIES*/
@@ -54,7 +58,7 @@
     bottom: 72%;
     left: 50%;
   }
-  .main{
+  .main {
     flex-direction: column;
     padding: 0;
   }

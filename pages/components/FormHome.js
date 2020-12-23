@@ -6,10 +6,12 @@ export default function Form(props) {
   let mail = "";
   let pass = "";
   let style = "";
+  let id = "";
   if (type == "log") {
     title = "Login";
     pass = <p>¿Has olvidado tu contraseña?</p>;
-    style= styles.log;
+    style = styles.log;
+    id = "formLog";
   } else {
     title = "Sign in";
     mail = (
@@ -21,10 +23,11 @@ export default function Form(props) {
         placeholder="email"
       />
     );
-    style= styles.sign;
+    style = styles.sign;
+    id = "formSign";
   }
   return (
-    <div className={styles.form__container+` `+style}>
+    <div className={styles.form__container + ` ` + style} id={id}>
       <form action="">
         <h1 className={styles.title}>{title}</h1>
         <input

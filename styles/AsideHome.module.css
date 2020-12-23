@@ -1,0 +1,46 @@
+.aside{
+    z-index: 30;
+    color: white;
+    text-align: center;
+    transition: 1.2s ease-in-out;
+    font-size: large;
+    width: 40%;
+
+}
+.button{
+    background-color: transparent;
+    border: 2px solid #f4ad7d;
+    border-radius: 30px;
+    font-size: medium;
+    font-weight: 600;
+    color: white;
+    padding: 10px 35px;
+    transition: 0.4s ease-in-out;
+
+}
+.animation:before {
+    transform: translate(100%, -50%);
+    right: 52%;
+  }
+
+.button:hover{
+    background-color: #f4ad7d;
+}
+
+.log{
+    margin-top: 2em;
+    margin-right: 2em;
+    position: absolute;
+    top:0;
+    right: 0;
+    opacity: 0;
+}
+
+.sign{
+    margin-top: 2em;
+    margin-left: 2em;
+    position: absolute;
+    top:0;
+    left:0;
+
+}
