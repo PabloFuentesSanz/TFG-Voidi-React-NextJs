@@ -1,5 +1,5 @@
 # Trabajo de Fin de Grado de Ingeniería de Software en la UPM (ETSISI).
-=======
+
 Este es un proyecto [Next.js](https://nextjs.org/) arrancado con [`npx create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

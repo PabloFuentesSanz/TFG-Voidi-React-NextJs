@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Navbar from './components/NavbarHome'
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <title>Voidi</title>
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <Navbar/>
     </div>
   )
 }
