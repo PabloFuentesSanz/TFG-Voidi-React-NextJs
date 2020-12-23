@@ -7,6 +7,8 @@ export default function Navbar() {
       <div className="logoDer">
         <img src="../logo.png" alt="logo" height="40px" />
       </div>
+
+      {/*Scope Styles*/}
       <style jsx>{`
         nav {
           display: grid;

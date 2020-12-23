@@ -1,0 +1,35 @@
+.form__container {
+  width: 30%;
+  max-width: 250px;
+  text-align: center;
+}
+.title {
+  color: #5f498a;
+}
+.input__field {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 2em;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
+.btn {
+  background-image: linear-gradient(
+    to right,
+    #da22ff 0%,
+    #9733ee 51%,
+    #da22ff 100%
+  );
+  padding: 15px 45px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 15px;
+}
+
+.btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}

@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  height: 2000px;
+  width: 2000px;
+  top: -10%;
+  right: 48%;
+  transform: translateY(-50%);
+  background-color: #e373c8;
+  transition: 1.8s ease-in-out;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.main{
+  display: flex;
+}
+
+/*MEDIA QUERIES*/
+/*Tablet*/
+@media (max-width: 870px) {
+  .container {
+    min-height: 800px;
+    height: 100vh;
+  }
+  .container:before {
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
+  }
+}
+
+/*Movil*/
+@media (max-width: 570px) {
+  .container {
+    padding: 1.5rem;
+  }
+  .container:before {
+    bottom: 72%;
+    left: 50%;
+  }
+}
