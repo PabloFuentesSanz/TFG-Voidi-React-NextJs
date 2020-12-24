@@ -1,46 +1,43 @@
-.aside{
-    z-index: 30;
-    color: white;
-    text-align: center;
-    transition: 1.2s ease-in-out;
-    font-size: large;
-    width: 40%;
-
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  text-align: center;
+  transition: 1.2s ease-in-out;
+  font-size: large;
+  z-index: 6;
 }
-.button{
-    background-color: transparent;
-    border: 2px solid #f4ad7d;
-    border-radius: 30px;
-    font-size: medium;
-    font-weight: 600;
-    color: white;
-    padding: 10px 35px;
-    transition: 0.4s ease-in-out;
 
+.button {
+  background-color: transparent;
+  border: 2px solid #f4ad7d;
+  border-radius: 30px;
+  font-size: medium;
+  font-weight: 600;
+  color: white;
+  padding: 10px 35px;
+  transition: 0.4s ease-in-out;
 }
 .animation:before {
-    transform: translate(100%, -50%);
-    right: 52%;
-  }
-
-.button:hover{
-    background-color: #f4ad7d;
+  transform: translate(100%, -50%);
+  right: 52%;
 }
 
-.log{
-    margin-top: 2em;
-    margin-right: 2em;
-    position: absolute;
-    top:0;
-    right: 0;
-    opacity: 0;
+.button:hover {
+  background-color: #f4ad7d;
 }
 
-.sign{
-    margin-top: 2em;
-    margin-left: 2em;
-    position: absolute;
-    top:0;
-    left:0;
+.log {
+  opacity: 0;
+  padding: 3rem 12% 2rem 17%;
+  
+}
 
+.sign {
+  padding: 3rem 17% 2rem 12%;
+}
+
+.image {
+  width: 100%;
 }

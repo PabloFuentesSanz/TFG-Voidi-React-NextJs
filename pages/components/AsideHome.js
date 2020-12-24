@@ -5,11 +5,15 @@ export default function Aside(props) {
     document.getElementById("container").classList.add(styles.animation);
     document.getElementById("buttonSign").style.opacity = "0";
     document.getElementById("buttonLog").style.opacity = "1";
+    document.getElementById("formLog").style.opacity = "0";
+    document.getElementById("formSign").style.opacity = "1";
   }
   function showLogin() {
     document.getElementById("container").classList.remove(styles.animation);
     document.getElementById("buttonSign").style.opacity = "1";
     document.getElementById("buttonLog").style.opacity = "0";
+    document.getElementById("formLog").style.opacity = "1";
+    document.getElementById("formSign").style.opacity = "0";
   }
   let type = props.type;
   let title = "";
@@ -18,6 +22,7 @@ export default function Aside(props) {
   let style = "";
   let id = "";
   let call = "";
+  let imagen = "";
 
   if (type == "log") {
     title = "¿Eres nuevo aquí?";
@@ -27,6 +32,7 @@ export default function Aside(props) {
     style = styles.sign;
     id = "buttonSign";
     call = showSignin;
+    imagen = "../undrawHomeLeft.svg";
   } else {
     title = "¿Ya eres de los nuestros?";
     content =
@@ -35,14 +41,19 @@ export default function Aside(props) {
     style = styles.log;
     id = "buttonLog";
     call = showLogin;
+    imagen = "../undrawHomeRight.svg";
   }
   return (
     <aside className={styles.aside + " " + style} id={id}>
-      <h1>{title}</h1>
-      <p>{content}</p>
-      <button className={styles.button} onClick={call}>
-        {boton}
-      </button>
+      <div>
+        <h1>{title}</h1>
+        <p>{content}</p>
+        <button className={styles.button} onClick={call}>
+          {boton}
+        </button>
+      </div>
+
+      <img src={imagen} alt="" className={styles.image} />
     </aside>
   );
 }

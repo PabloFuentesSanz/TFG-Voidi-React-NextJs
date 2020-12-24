@@ -5,7 +5,6 @@ import Form from "./components/FormHome";
 import Aside from "./components/AsideHome";
 
 export default function Home() {
-  
   return (
     <div className={styles.container} id="container">
       <Head>
@@ -13,12 +12,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <Navbar />
-      <Aside type="sign"/>
-      <Aside type="log"/>
       <main className={styles.main}>
-        <Form type="sign"/>
-        <Form type="log"/>
+        <Form type="sign" />
+        <Form type="log" />
       </main>
+      <div className={styles.aside__container}>
+        <Aside type="log" />
+        <Aside type="sign" />
+      </div>
+
+      
     </div>
   );
 }

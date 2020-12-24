@@ -1,6 +1,9 @@
 .form__container {
   width: 350px;
   text-align: center;
+  transition: 1.2s ease-in-out;
+  z-index: 5;
+
 }
 .title {
   color: #5f498a;
