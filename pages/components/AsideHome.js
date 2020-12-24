@@ -61,7 +61,6 @@ export default function Aside(props) {
           {boton}
         </button>
       </div>
-
       <img src={imagen} alt="" className={styles.image} />
     </aside>
   );

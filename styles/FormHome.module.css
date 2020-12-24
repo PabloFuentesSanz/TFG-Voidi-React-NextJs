@@ -60,8 +60,17 @@
 /*Movil*/
 @media (max-width: 570px) {
   .form__container {
-    padding: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
     width: 100%;
     max-width: 100%;
+  }
+  .log{
+    position: absolute;
+    bottom: 10%;
+  }
+  .sign{
+    position: absolute;
+    top: 5%;
   }
 }

@@ -33,6 +33,7 @@
   opacity: 0;
   padding: 3rem 12% 2rem 17%;
   transform: translateX(800px);
+  
 }
 
 .sign {
@@ -62,5 +63,28 @@
     align-items: center;
     padding: 2.5rem 8%;
     grid-column: 1 / 2;
+  }
+}
+
+/*Movil*/
+@media (max-width: 570px) {
+  .animation:before {
+    bottom: 32%;
+    left: 50%;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .aside{
+    padding: 0.5rem 1rem;
+    font-size: medium;
+  }
+  .log{
+    grid-row: 3 / 4;
+  }
+  .sign{
+    grid-row: 1 / 2;
   }
 }
