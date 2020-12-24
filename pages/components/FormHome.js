@@ -9,7 +9,7 @@ export default function Form(props) {
   let id = "";
   if (type == "log") {
     title = "Login";
-    pass = <p>¿Has olvidado tu contraseña?</p>;
+    pass = <p>¿Has olvidado <a className={styles.enlace}>tu contraseña?</a></p>;
     style = styles.log;
     id = "formLog";
   } else {

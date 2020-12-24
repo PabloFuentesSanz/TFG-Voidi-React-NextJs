@@ -7,6 +7,11 @@ export default function Aside(props) {
     document.getElementById("buttonLog").style.opacity = "1";
     document.getElementById("formLog").style.opacity = "0";
     document.getElementById("formSign").style.opacity = "1";
+    document.getElementById("buttonLog").style.transform = "translateX(0px)";
+    document.getElementById("buttonSign").style.transform = "translateX(-800px)";
+    document.getElementById("formLog").style.transform = "translateX(-400px)";
+    document.getElementById("formSign").style.transform = "translateX(0px)";
+
   }
   function showLogin() {
     document.getElementById("container").classList.remove(styles.animation);
@@ -14,6 +19,10 @@ export default function Aside(props) {
     document.getElementById("buttonLog").style.opacity = "0";
     document.getElementById("formLog").style.opacity = "1";
     document.getElementById("formSign").style.opacity = "0";
+    document.getElementById("buttonSign").style.transform = "translateX(0px)";
+    document.getElementById("buttonLog").style.transform = "translateX(800px)";
+    document.getElementById("formLog").style.transform = "translateX(0px)";
+    document.getElementById("formSign").style.transform = "translateX(400px)";
   }
   let type = props.type;
   let title = "";

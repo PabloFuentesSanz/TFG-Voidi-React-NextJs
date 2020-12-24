@@ -13,14 +13,18 @@ export default function Navbar() {
         nav {
           display: grid;
           padding: 1em;
+          
         }
         .logoIzq{
           text-align: left;
           grid-column: 1/2;
+          padding-left: 2em;
         }
         .logoDer{
           text-align: right;
           grid-column: 2/2;
+          padding-right: 2em;
+
         }
       `}</style>
     </nav>
