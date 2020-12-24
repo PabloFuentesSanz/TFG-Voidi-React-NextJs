@@ -1,32 +1,14 @@
+import styles from "../../styles/NavbarHome.module.css";
+
 export default function Navbar() {
   return (
-    <nav>
-      <div className="logoIzq">
-        <img src="../logo.png" alt="logo" height="40px"  />
+    <nav className={styles.nav}>
+      <div className={styles.logoIzq}>
+        <img src="../logo.png" alt="logo" height="45px"  />
       </div>
-      <div className="logoDer">
-        <img src="../logo.png" alt="logo" height="40px" />
+      <div className={styles.logoDer}>
+        <img src="../logo.png" alt="logo" height="45px" />
       </div>
-
-      {/*Scope Styles*/}
-      <style jsx>{`
-        nav {
-          display: grid;
-          padding: 1em;
-          
-        }
-        .logoIzq{
-          text-align: left;
-          grid-column: 1/2;
-          padding-left: 2em;
-        }
-        .logoDer{
-          text-align: right;
-          grid-column: 2/2;
-          padding-right: 2em;
-
-        }
-      `}</style>
     </nav>
   );
 }
