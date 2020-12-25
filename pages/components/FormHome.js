@@ -42,7 +42,7 @@ export default function Form(props) {
 
   return (
     <div className={styles.form__container + ` ` + style} id={id}>
-      <form action="">
+      <div>
         <h1 className={styles.title}>{title}</h1>
         <input
           className={styles.input__field}
@@ -60,9 +60,13 @@ export default function Form(props) {
           placeholder="Password"
         />
         <button className={styles.btn}>CONTINUE</button>
+        <p>Or {title} with:</p>
+      <button onClick={handleClick} className={styles.button_google}>
+        <img src="/googleIcon.png" height="25px" />
+        <span>Google</span>
+      </button>
         {pass}
-      </form>
-      <img src="/googleIcon.png" height="30px" onClick={handleClick}/>
+      </div>
     </div>
   );
 }

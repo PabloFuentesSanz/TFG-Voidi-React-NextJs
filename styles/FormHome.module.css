@@ -1,10 +1,9 @@
 .form__container {
   width: 350px;
   text-align: center;
-  transition:  0.7s ease-in;
+  transition: 0.7s ease-in;
   transition-delay: 0.5s;
   z-index: 5;
-
 }
 .title {
   color: #5f498a;
@@ -21,9 +20,9 @@
 .btn {
   background-image: linear-gradient(
     to right,
-    #E373C8 0%,
+    #e373c8 0%,
     #9733ee 51%,
-    #E373C8 100%
+    #e373c8 100%
   );
   padding: 20px 45px;
   text-transform: uppercase;
@@ -34,6 +33,7 @@
   font-size: medium;
   font-weight: 600;
   width: 70%;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -42,20 +42,39 @@
   text-decoration: none;
 }
 
-.enlace{
-  color:#E373C8;
+.enlace {
+  color: #e373c8;
 }
 
-.sign{
+.sign {
   opacity: 0;
-  transform: translateX(400px);
+}
 
+.button_google{
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  padding-top:0.5em;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: 0px 2px 5px 1px rgba(161,161,161,1);
+  transition: 0.1s;
+}
+
+.button_google:active{
+  box-shadow: none;
+
+}
+.button_google > span{
+ padding-left: 1em;
+ padding-right: 1em;
+ font-weight: 500;
+ position: relative;
+ bottom: 6px;
 }
 
 /*MEDIA QUERIES*/
 /*Tablet*/
 @media (max-width: 870px) {
-  
 }
 
 /*Movil*/
@@ -66,11 +85,11 @@
     width: 100%;
     max-width: 100%;
   }
-  .log{
+  .log {
     position: absolute;
     bottom: 10%;
   }
-  .sign{
+  .sign {
     position: absolute;
     top: 5%;
   }

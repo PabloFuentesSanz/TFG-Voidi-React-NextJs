@@ -19,11 +19,13 @@
   color: white;
   padding: 10px 35px;
   transition: 0.4s ease-in-out;
+  cursor: pointer;
 }
 .animation:before {
   transform: translate(100%, -50%) !important;
   right: 52% !important;
 }
+
 
 .button:hover {
   background-color: #f4ad7d;

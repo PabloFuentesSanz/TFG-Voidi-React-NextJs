@@ -12,6 +12,8 @@ const firebaseConfig = {
   measurementId: "G-TRTCXB7BST"
 };
 
+//Inicializar firebase si no hay otra inicializada antes 
+//(Esto se debe a que firebase no se actualiza al guardar)
 !firebase.apps.length && firebase.initializeApp(firebaseConfig);
 
 export const loginWithGoogle = ()=>{
