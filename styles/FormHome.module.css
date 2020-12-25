@@ -86,11 +86,11 @@
     width: 100%;
     max-width: 100%;
   }
-  .log {
+  .sign {
     position: absolute;
     bottom: 10%;
   }
-  .sign {
+  .log {
     position: absolute;
     top: 5%;
   }

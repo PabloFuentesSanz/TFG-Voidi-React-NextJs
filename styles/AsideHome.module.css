@@ -26,7 +26,6 @@
   right: 52% !important;
 }
 
-
 .button:hover {
   background-color: #f4ad7d;
 }
@@ -35,7 +34,6 @@
   opacity: 0;
   padding: 3rem 12% 2rem 17%;
   transform: translateX(800px);
-  
 }
 
 .sign {
@@ -54,13 +52,13 @@
     bottom: 32% !important;
     right: initial !important;
   }
-  
+
   .image {
     width: 200px;
     transition: transform 0.9s ease-in-out;
     transition-delay: 0.6s;
   }
-  .aside{
+  .aside {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -72,7 +70,7 @@
 /*Movil*/
 @media (max-width: 570px) {
   .animation:before {
-    bottom: 29% !important;
+    bottom: 72% !important;
     left: 50% !important;
   }
 
@@ -80,14 +78,14 @@
     display: none;
   }
 
-  .aside{
+  .aside {
     padding: 0.5rem 1rem;
     font-size: medium;
   }
-  .log{
+  .sign {
     grid-row: 3 / 4;
   }
-  .sign{
+  .log {
     grid-row: 1 / 2;
   }
 }

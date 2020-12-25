@@ -67,7 +67,7 @@
     padding: 1.5rem;
   }
   .container:before {
-    bottom: 72%;
+    top: 70%;
     left: 50%;
   }
   .main {
