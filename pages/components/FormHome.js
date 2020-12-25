@@ -1,6 +1,6 @@
 import styles from "../../styles/FormHome.module.css";
 
-import { loginWithGoogle } from "../firebase/client";
+import { loginWithGoogle } from "../../firebase/client";
 
 export default function Form(props) {
   let type = props.type;
