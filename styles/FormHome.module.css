@@ -47,7 +47,8 @@
 }
 
 .sign {
-  opacity: 0;
+  opacity: 1;
+  transform: translateX(-400px);
 }
 
 .button_google{

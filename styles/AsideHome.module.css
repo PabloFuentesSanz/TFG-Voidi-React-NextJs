@@ -72,7 +72,7 @@
 /*Movil*/
 @media (max-width: 570px) {
   .animation:before {
-    bottom: 32% !important;
+    bottom: 29% !important;
     left: 50% !important;
   }
 
