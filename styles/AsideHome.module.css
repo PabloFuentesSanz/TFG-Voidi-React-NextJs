@@ -21,8 +21,8 @@
   transition: 0.4s ease-in-out;
 }
 .animation:before {
-  transform: translate(100%, -50%);
-  right: 52%;
+  transform: translate(100%, -50%) !important;
+  right: 52% !important;
 }
 
 .button:hover {

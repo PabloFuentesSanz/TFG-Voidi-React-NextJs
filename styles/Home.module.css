@@ -46,14 +46,14 @@
     height: 100vh;
   }
   .container:before {
-    width: 1500px !important;
-    height: 1500px !important;
-    transform: translateX(-50%) !important;
-    left: 30% !important;
-    bottom: 68% !important;
-    right: initial !important;
-    top: initial !important;
-    transition: 2s ease-in-out !important;
+    width: 1500px;
+    height: 1500px;
+    transform: translateX(-50%);
+    left: 30%;
+    bottom: 68%;
+    right: initial;
+    top: initial;
+    transition: 2s ease-in-out;
   }
   .aside__container {
     grid-template-columns: 1fr;
@@ -67,8 +67,8 @@
     padding: 1.5rem;
   }
   .container:before {
-    bottom: 72% !important;
-    left: 50% !important;
+    bottom: 72%;
+    left: 50%;
   }
   .main {
     flex-direction: column;
