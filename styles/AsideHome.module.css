@@ -48,9 +48,7 @@
 /*Tablet*/
 @media (max-width: 870px) {
   .animation:before {
-    transform: translate(-50%, 100%) !important;
-    bottom: 32% !important;
-    right: initial !important;
+    
   }
 
   .image {
@@ -70,8 +68,7 @@
 /*Movil*/
 @media (max-width: 570px) {
   .animation:before {
-    bottom: 72% !important;
-    left: 50% !important;
+    transform: translate(-50%, -123%)! important
   }
 
   .image {
