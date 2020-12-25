@@ -21,8 +21,8 @@
   transition: 0.4s ease-in-out;
 }
 .animation:before {
-  transform: translate(100%, -50%) !important;
-  right: 52% !important;
+  transform: translate(100%, -50%);
+  right: 52%;
 }
 
 .button:hover {
@@ -48,9 +48,9 @@
 /*Tablet*/
 @media (max-width: 870px) {
   .animation:before {
-    transform: translate(-50%, 100%) !important;
-    bottom: 32% !important;
-    right: initial !important;
+    transform: translate(-50%, 100%);
+    bottom: 32%;
+    right: initial;
   }
   
   .image {

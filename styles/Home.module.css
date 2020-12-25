@@ -65,7 +65,6 @@
 @media (max-width: 570px) {
   .container {
     padding: 1.5rem;
-    min-height: 400px;
   }
   .container:before {
     bottom: 72%;

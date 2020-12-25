@@ -17,6 +17,6 @@
 /*Tablet*/
 @media (max-width: 870px) {
     .nav{
-        display:none;
+        display:none ;
     }
 }
