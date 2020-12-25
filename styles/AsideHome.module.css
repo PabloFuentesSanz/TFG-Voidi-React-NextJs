@@ -78,11 +78,15 @@
   .aside {
     padding: 0.5rem 1rem;
     font-size: medium;
+    align-items: flex-start;
   }
   .sign {
     grid-row: 3 / 4;
   }
   .log {
     grid-row: 1 / 2;
+  }
+  .contenido{
+    display:none;
   }
 }

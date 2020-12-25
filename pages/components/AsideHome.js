@@ -56,7 +56,7 @@ export default function Aside(props) {
     <aside className={styles.aside + " " + style} id={id}>
       <div>
         <h1>{title}</h1>
-        <p>{content}</p>
+        <p className={styles.contenido}>{content}</p>
         <button className={styles.button} onClick={call}>
           {boton}
         </button>
