@@ -34,11 +34,15 @@ export default function Form(props) {
     id = "formSign";
   }
 
-  const handleClick = () => {
+  const handleClickGoogle = () => {
     loginWithGoogle().then((user) => {
       console.log(user);
     });
   };
+
+  const handleClickFacebook = () =>{
+    alert("hola")
+  }
 
   return (
     <div className={styles.form__container + ` ` + style} id={id}>
@@ -61,10 +65,14 @@ export default function Form(props) {
         />
         <button className={styles.btn}>CONTINUE</button>
         <p>Or {title} with:</p>
-      <button onClick={handleClick} className={styles.button_google}>
-        <img src="/googleIcon.png" height="25px" />
-        <span>Google</span>
-      </button>
+        <button onClick={handleClickGoogle} className={styles.button_google}>
+          <img src="/googleIcon.png" height="25px" />
+          <span>Google</span>
+        </button>
+        <button onClick={handleClickFacebook} className={styles.button_google}>
+          <img src="/faceIcon.png" height="25px" />
+          <span>Facebook</span>
+        </button>
         {pass}
       </div>
     </div>
