@@ -1,5 +1,7 @@
 import styles from "../../styles/FormHome.module.css";
 
+import { loginWithGoogle } from "../firebase/client";
+
 export default function Form(props) {
   let type = props.type;
   let title = "";
@@ -7,9 +9,14 @@ export default function Form(props) {
   let pass = "";
   let style = "";
   let id = "";
+
   if (type == "log") {
     title = "Login";
-    pass = <p>¿Has olvidado <a className={styles.enlace}>tu contraseña?</a></p>;
+    pass = (
+      <p>
+        ¿Has olvidado <a className={styles.enlace}>tu contraseña?</a>
+      </p>
+    );
     style = styles.log;
     id = "formLog";
   } else {
@@ -26,6 +33,13 @@ export default function Form(props) {
     style = styles.sign;
     id = "formSign";
   }
+
+  const handleClick = () => {
+    loginWithGoogle().then((user) => {
+      console.log(user);
+    });
+  };
+
   return (
     <div className={styles.form__container + ` ` + style} id={id}>
       <form action="">
@@ -48,6 +62,7 @@ export default function Form(props) {
         <button className={styles.btn}>CONTINUE</button>
         {pass}
       </form>
+      <img src="/googleIcon.png" height="30px" onClick={handleClick}/>
     </div>
   );
 }

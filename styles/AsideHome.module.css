@@ -44,7 +44,8 @@
   width: 100%;
 }
 
-
+/*MEDIA QUERIES*/
+/*Tablet*/
 @media (max-width: 870px) {
   .animation:before {
     transform: translate(-50%, 100%);
