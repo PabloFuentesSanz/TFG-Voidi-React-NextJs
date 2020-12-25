@@ -10,6 +10,7 @@ export default function Home() {
       <Head>
         <title>Voidi</title>
         <link rel="icon" href="/favicon.png" />
+        <meta name="google" content="notranslate" />
       </Head>
       <Navbar />
       <main className={styles.main}>
