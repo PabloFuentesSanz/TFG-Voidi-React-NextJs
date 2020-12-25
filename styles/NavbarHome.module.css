@@ -13,10 +13,38 @@
   padding-right: 2em;
 }
 
+.nav > div > img{
+  height: 45px;
+}
 /*MEDIA QUERIES*/
 /*Tablet*/
 @media (max-width: 870px) {
-    .nav{
-        display:none ;
-    }
+  .nav {
+    display: none;
+  }
+}
+
+/*Movil*/
+@media (max-width: 570px) {
+  .nav {
+    display: inherit !important;
+  }
+  .logoIzq {
+    padding: 0 !important;
+    position: absolute !important;
+    bottom: 10px !important;
+    left: 10px !important;
+    padding: 0 !important;
+  }
+  .logoDer {
+    padding: 0 !important;
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    padding: 0 !important;
+  }
+
+  .nav > div > img{
+    height: 35px;
+  }
 }
