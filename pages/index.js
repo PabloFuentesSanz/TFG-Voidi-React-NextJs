@@ -13,7 +13,7 @@ export default function Home() {
   }, [])
 
   return (
-    <div className={styles.container} id="container" ref={container}>
+    <div className={styles.container} id="container" ref={container} style={{ opacity: '0' }}>
       <Head>
         <title>Voidi</title>
         <link rel="icon" href="/favicon.png" />
