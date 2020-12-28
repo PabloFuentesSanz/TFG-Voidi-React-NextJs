@@ -19,8 +19,8 @@ export default function Form(props) {
   //HOOKS
   //State
   const [data, setData] = useState({
-    ["email" + type.charAt(0).toUpperCase() + type.slice(1)]: "",
-    ["pass" + type.charAt(0).toUpperCase() + type.slice(1)]: "",
+    ["email" + type]: "",
+    ["pass" + type]: "",
     userName: ""
   });
 
@@ -62,7 +62,7 @@ export default function Form(props) {
   const handleClickMail = (e) => {
     e.preventDefault();
     if (type == "log") {
-      loginWithMail(data.emailLog, data.passLog)
+      loginWithMail(data.emaillog, data.passlog)
         .then((user) => {
           alert("Login correcto");
         })
@@ -72,7 +72,7 @@ export default function Form(props) {
         });
     } else {
       e.preventDefault();
-      signinWithMail(data.emailSign, data.passSign)
+      signinWithMail(data.emailsign, data.passsign)
         .then((user) => {
           alert("Signin correcto");
         })
@@ -107,14 +107,14 @@ export default function Form(props) {
         <input
           className={styles.input__field}
           type="email"
-          name={`email${type.charAt(0).toUpperCase() + type.slice(1)}`}
+          name={`email${type}`}
           placeholder="Email"
           onChange={handleInputChange}
         />
         <input
           className={styles.input__field}
           type="password"
-          name={`pass${type.charAt(0).toUpperCase() + type.slice(1)}`}
+          name={`pass${type}`}
           placeholder="Password"
           onChange={handleInputChange}
         />
