@@ -4,7 +4,8 @@
   background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
-  transition: 3.5s ease-in-out;
+  transition: 1.5s ease-in-out;
+  transition-delay: 2s;
 }
 
 .container:before {
