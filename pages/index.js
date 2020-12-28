@@ -9,7 +9,7 @@ export default function Home() {
   const container = useRef(0);
 
   useEffect(()=>{
-    container.current.style.opacity = "0";
+    container.current.style.opacity = "1";
   }, [])
 
   return (
