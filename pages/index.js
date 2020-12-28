@@ -3,10 +3,17 @@ import styles from "../styles/Home.module.css";
 import Navbar from "./components/NavbarHome";
 import Form from "./components/FormHome";
 import Aside from "./components/AsideHome";
+import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
+  const container = useRef(0);
+
+  useEffect(()=>{
+    container.current.style.opacity = "0";
+  }, [])
+
   return (
-    <div className={styles.container} id="container">
+    <div className={styles.container} id="container" ref={container}>
       <Head>
         <title>Voidi</title>
         <link rel="icon" href="/favicon.png" />
@@ -21,8 +28,6 @@ export default function Home() {
         <Aside type="log" />
         <Aside type="sign" />
       </div>
-
-      
     </div>
   );
 }
