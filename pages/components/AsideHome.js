@@ -1,9 +1,10 @@
 import styles from "../../styles/AsideHome.module.css";
+import {useRef} from 'react';
 
 export default function Aside(props) {
   function showSignin() {
     document.getElementById("container").classList.add(styles.animation);
-    document.getElementById("formLog").style.opacity = "1";
+    document.getElementById("formLog").style.opacity = "0";
     document.getElementById("formSign").style.opacity = "1";
     document.getElementById("formLog").style.transform = "translateX(400px)";
     document.getElementById("formSign").style.transform = "translateX(0px)";
@@ -16,7 +17,7 @@ export default function Aside(props) {
   function showLogin() {
     document.getElementById("container").classList.remove(styles.animation);
     document.getElementById("formLog").style.opacity = "1";
-    document.getElementById("formSign").style.opacity = "1";
+    document.getElementById("formSign").style.opacity = "0";
     document.getElementById("formLog").style.transform = "translateX(0px)";
     document.getElementById("formSign").style.transform = "translateX(-400px)";
     document.getElementById("buttonSign").style.opacity = "1";
@@ -32,6 +33,7 @@ export default function Aside(props) {
   let id = "";
   let call = "";
   let imagen = "";
+  const pepe = useRef(null);
 
   if (type == "log") {
     title = "¿Eres nuevo aquí?";
