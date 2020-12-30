@@ -37,7 +37,7 @@ export const logout = () =>{
 
 export const loginWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider();
-  return auth.signInWithRedirect(googleProvider);
+  return auth.signInWithPopup(googleProvider);
 };
 
 //Auth con Facebook

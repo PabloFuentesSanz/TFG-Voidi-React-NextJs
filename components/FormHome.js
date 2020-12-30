@@ -69,7 +69,7 @@ export default function Form(props) {
     if (type == "log") {
       loginWithMail(data.emaillog, data.passlog)
         .then((user) => {
-          router.replace("/home"); //Crear Route en index.js
+          router.replace("/home");
         })
         .catch((error) => {
           var errorMessage = error.message;
@@ -92,7 +92,11 @@ export default function Form(props) {
   const handleClickGoogle = (e) => {
     e.preventDefault();
     loginWithGoogle().then((user) => {
-      console.log(user);
+      if(user.additionalUserInfo.isNewUser){
+        router.replace("/register");
+      }else{
+        router.replace("/home"); //Crear Route en index.js
+      }
     });
   };
 
