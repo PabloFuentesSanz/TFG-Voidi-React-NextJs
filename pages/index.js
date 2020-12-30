@@ -1,14 +1,17 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Navbar from "./components/NavbarHome";
-import Form from "./components/FormHome";
-import Aside from "./components/AsideHome";
+import Navbar from "../components/NavbarHome";
+import Form from "../components/FormHome";
+import Aside from "../components/AsideHome";
 import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
+  //HOOKS
+  //useRef para hacer referencia a elementos de la página
   const container = useRef(0);
   const imagen = useRef(0);
 
+  //useEffect se ejecuta antes de cargar la página y permite manejar efecto en la app
   useEffect(() => {
     container.current.style.opacity = "1";
     imagen.current.style.opacity = "0";

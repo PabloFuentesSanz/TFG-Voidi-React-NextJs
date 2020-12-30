@@ -15,21 +15,29 @@ const firebaseConfig = {
 //Inicializar firebase si no hay otra inicializada antes
 //(Esto se debe a que firebase no se actualiza al guardar)
 !firebase.apps.length && firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth();
 
 //Auth con Mail y Contraseña
-export const signinWithMail = (email, password) => {
-  return firebase.auth().createUserWithEmailAndPassword(email, password);
+export const signinWithMail = async (userName, email, password) => {
+  await auth.createUserWithEmailAndPassword(email, password);
+  return auth.currentUser.updateProfile({
+    displayName: userName
+  })
 };
 
 export const loginWithMail = (email, password) => {
-  return firebase.auth().signInWithEmailAndPassword(email, password);
+  return auth.signInWithEmailAndPassword(email, password);
 };
+
+export const logout = () =>{
+  return auth.signOut();
+}
 
 //Auth con Google
 
 export const loginWithGoogle = () => {
   const googleProvider = new firebase.auth.GoogleAuthProvider();
-  return firebase.auth().signInWithRedirect(googleProvider);
+  return auth.signInWithRedirect(googleProvider);
 };
 
 //Auth con Facebook

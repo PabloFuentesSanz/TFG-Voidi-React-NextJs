@@ -1,4 +1,4 @@
-import styles from "../../styles/AsideHome.module.css";
+import styles from "../styles/AsideHome.module.css";
 import {useRef} from 'react';
 
 export default function Aside(props) {

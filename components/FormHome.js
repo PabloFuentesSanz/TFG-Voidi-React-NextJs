@@ -1,9 +1,6 @@
-import styles from "../../styles/FormHome.module.css";
-import {
-  loginWithGoogle,
-  loginWithMail,
-  signinWithMail,
-} from "../../firebase/client";
+import styles from "../styles/FormHome.module.css";
+import { loginWithGoogle, loginWithMail, signinWithMail } from "../firebase";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function Form(props) {
@@ -14,17 +11,20 @@ export default function Form(props) {
   let pass = "";
   let style = "";
   let id = "";
-  
-  
+  let valueEmail = "";
+  let valuePass = "";
+
   //HOOKS
-  //State
+  const router = useRouter();
+
+  //useState declarar variables de estado
   const [data, setData] = useState({
     ["email" + type]: "",
     ["pass" + type]: "",
-    userName: ""
+    userName: "",
   });
 
-  //Manejo de Inputs
+  //Manejo de Inputs onChange
   const handleInputChange = (e) => {
     setData({
       ...data,
@@ -42,8 +42,12 @@ export default function Form(props) {
     );
     style = styles.log;
     id = "formLog";
+    valueEmail = data.emaillog;
+    valuePass = data.passlog;
   } else {
     title = "Sign in";
+    valueEmail = data.emailsign;
+    valuePass = data.passsign;
     userName = (
       <input
         className={styles.input__field}
@@ -51,20 +55,21 @@ export default function Form(props) {
         name="userName"
         placeholder="Username"
         onChange={handleInputChange}
+        value={data.userName}
       />
     );
     style = styles.sign;
     id = "formSign";
   }
 
-  //INICIO DE SESIÓN
+  //INICIO DE SESIÓN --> Pasarlo a useUser() Hook propio??
   //Inicio de sesión por mail
   const handleClickMail = (e) => {
     e.preventDefault();
     if (type == "log") {
       loginWithMail(data.emaillog, data.passlog)
         .then((user) => {
-          alert("Login correcto");
+          router.replace("/home"); //Crear Route en index.js
         })
         .catch((error) => {
           var errorMessage = error.message;
@@ -72,7 +77,7 @@ export default function Form(props) {
         });
     } else {
       e.preventDefault();
-      signinWithMail(data.emailsign, data.passsign)
+      signinWithMail(data.userName, data.emailsign, data.passsign)
         .then((user) => {
           alert("Signin correcto");
         })
@@ -110,6 +115,7 @@ export default function Form(props) {
           name={`email${type}`}
           placeholder="Email"
           onChange={handleInputChange}
+          value={valueEmail}
         />
         <input
           className={styles.input__field}
@@ -117,6 +123,7 @@ export default function Form(props) {
           name={`pass${type}`}
           placeholder="Password"
           onChange={handleInputChange}
+          value={valuePass}
         />
         <button onClick={handleClickMail} className={styles.btn}>
           CONTINUE
