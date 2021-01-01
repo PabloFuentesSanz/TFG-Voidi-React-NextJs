@@ -24,6 +24,7 @@ export default function Form(props) {
     userName: "",
   });
 
+
   //Manejo de Inputs onChange
   const handleInputChange = (e) => {
     setData({
@@ -66,7 +67,7 @@ export default function Form(props) {
   //Inicio de sesión por mail
   const handleClickMail = (e) => {
     e.preventDefault();
-    if (type == "log") {
+    if (type == "log") { //LOGIN WITH MAIL
       loginWithMail(data.emaillog, data.passlog)
         .then((user) => {
           router.replace("/home");
@@ -75,7 +76,7 @@ export default function Form(props) {
           var errorMessage = error.message;
           alert(errorMessage);
         });
-    } else {
+    } else { // SIGN UP WITH MAIL
       e.preventDefault();
       signinWithMail(data.userName, data.emailsign, data.passsign)
         .then((user) => {
@@ -92,9 +93,10 @@ export default function Form(props) {
   const handleClickGoogle = (e) => {
     e.preventDefault();
     loginWithGoogle().then((user) => {
-      if(user.additionalUserInfo.isNewUser){
+      console.log(user)
+      if (user.additionalUserInfo.isNewUser) {
         router.replace("/register");
-      }else{
+      } else {
         router.replace("/home"); //Crear Route en index.js
       }
     });

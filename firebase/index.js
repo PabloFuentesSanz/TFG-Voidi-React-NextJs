@@ -17,21 +17,34 @@ const firebaseConfig = {
 !firebase.apps.length && firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
+const mapUserFromFirebaseAuth = (user) => {
+  const {email, displayName, photoURL, uid } = user;
+  return {email, displayName, photoURL, uid };
+};
+
+//Cuando el estado del usuario cambia
+export const onAuthStateChanged = (setUser) => {
+  return firebase.auth().onAuthStateChanged((user) => {
+    const finalUser = user ? mapUserFromFirebaseAuth(user) : null;
+    setUser(finalUser);
+  });
+};
+
 //Auth con Mail y Contraseña
 export const signinWithMail = async (userName, email, password) => {
   await auth.createUserWithEmailAndPassword(email, password);
   return auth.currentUser.updateProfile({
-    displayName: userName
-  })
+    displayName: userName,
+  });
 };
 
 export const loginWithMail = (email, password) => {
   return auth.signInWithEmailAndPassword(email, password);
 };
 
-export const logout = () =>{
+export const logout = () => {
   return auth.signOut();
-}
+};
 
 //Auth con Google
 
