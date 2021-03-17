@@ -1,0 +1,33 @@
+
+
+.card {
+	position: relative;
+	background-color: white;
+    margin-left: 5em;
+    width: 35vw;
+	max-width: 85vw;
+	height: 80vh;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	box-shadow: inset 2px -108px 49px -44px rgba(0,0,0,0.75);
+	background-size: cover;
+	background-position: center;
+  }
+  
+  .cardContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 2vh;
+  }
+  .swipe {
+	position: absolute;
+  }
+  
+  .personName {
+	position: absolute;
+	bottom: 0;
+	font-family: "Open Sans", sans-serif;
+	padding: 10px;
+	color: rgb(228, 228, 228);
+	text-shadow: 4px;
+  }

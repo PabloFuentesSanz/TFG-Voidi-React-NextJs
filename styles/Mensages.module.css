@@ -1,0 +1,28 @@
+.msg{
+    position: absolute;
+    bottom:-10px;
+    right: 3em;
+    height: 400px;
+    width: 20vw;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.32);
+    transition: 0.5s;
+}
+
+.title{
+    margin-left: 1em;
+    margin-top: 10px;
+}
+.icon{
+    float: right;
+    width: 35px;
+    height: 35px;
+    margin-right: 1em;
+    padding: 5px;
+    border-radius: 50%;
+    color:#e373c8;
+}
+.icon:hover{
+    background-color: rgb(255, 224, 251);
+}

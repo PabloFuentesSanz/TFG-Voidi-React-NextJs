@@ -1,0 +1,17 @@
+.nav {
+    padding: 0.5em;
+    display: grid;
+    height: 7vh;
+    min-height: 55px;
+    border-bottom: 1px solid #cacaca;
+}
+
+.logoIzq {
+    text-align: left;
+    grid-column: 1/2;
+    padding-left: 2em;
+}
+
+.nav>div>img {
+    height: 45px;
+}

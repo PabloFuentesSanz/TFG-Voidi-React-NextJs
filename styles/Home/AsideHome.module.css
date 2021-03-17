@@ -1,0 +1,20 @@
+.aside {
+    height: 80vh;
+    width: 15vw;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.32);
+    text-align: center;
+}
+
+.image {
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin:auto;
+    margin-top: 2em;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
