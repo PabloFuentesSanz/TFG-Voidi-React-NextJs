@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 export default function AsideHome(props) {
     useEffect(() => {
-            document.getElementById("imgProfile").style.backgroundImage = "url('../logo.png')"
+            document.getElementById("imgProfile").style.backgroundImage = "url('../profile.jpg')"
         
       });
 

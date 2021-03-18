@@ -1,31 +1,33 @@
 import styles from "../styles/Mensages.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDown, faAngleUp, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react";
 
 
 
 export default function Mensages() {
-    let isUp = true;
-    const [icon, setIcon] = useState(faAngleDown);
-    const handleClick = (e) => {
-        e.preventDefault();
+    const [isUp, setIsUp] = useState(false);
+    const [icon, setIcon] = useState(faAngleUp);
+    const handleArrowClick = (e) => {
         if (isUp) {
             setIcon(faAngleUp);
-            document.getElementById("mensages").style.bottom = "-345px";
-            isUp = false;
+            document.getElementById("mensages").style.height = "50px";
+            setIsUp(false);
         } else {
             setIcon(faAngleDown);
-            document.getElementById("mensages").style.bottom = "-10px";
-            isUp = true;
+            document.getElementById("mensages").style.height = "400px";
+            setIsUp(true);
         }
     }
     return (
         <div className={styles.msg} id="mensages">
-            <div>
-
-                <h3 className={styles.title}>Mensajes <FontAwesomeIcon id="icon" className={styles.icon} onClick={handleClick} icon={icon} /></h3>
+            <div className={styles.titleContainer}>
+                <h3 className={styles.title}><FontAwesomeIcon id="icon" className={styles.iconMen} icon={faEnvelope} /> Mensajes <FontAwesomeIcon id="icon" className={styles.icon} onClick={handleArrowClick} icon={icon} /></h3>
             </div>
+                <h1>Mensaje 1</h1>
+                <h1>Mensaje 2</h1>
+                <h1>Mensaje 3</h1>
+                <h1>Mensaje 4</h1>
 
         </div>
     );

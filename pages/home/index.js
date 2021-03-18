@@ -1,6 +1,5 @@
 import Head from "next/head";
 import useUser, { USER_STATES } from "../../hooks/useUser";
-import { logout } from "../../firebase";
 import Navbar from "../../components/Navbar";
 import styles from "../../styles/Home.module.css";
 import AsideHome from "../../components/AsideHome";
@@ -17,10 +16,6 @@ export default function Home() {
 
 	const user = useUser();
 
-	const clickLogout = (e) => {
-		e.preventDefault();
-		logout();
-	};
 
 	const update = (e) =>{
 		e.preventDefault();
@@ -51,7 +46,7 @@ export default function Home() {
 						</main>
 						<Mensages></Mensages>
 					</div>
-					{/*<button onClick={clickLogout}>Log out</button>
+					{/*
 					
 					<input type="text" value={name} onChange={e => setName(e.target.value)}/>
 					<button onClick={update}>Enviar</button>

@@ -1,11 +1,12 @@
 .msg{
     position: absolute;
-    bottom:-10px;
     right: 3em;
-    height: 400px;
+    bottom: 0;
+    height: 50px;
     width: 20vw;
     background-color: white;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.32);
     transition: 0.5s;
 }
@@ -22,7 +23,23 @@
     padding: 5px;
     border-radius: 50%;
     color:#e373c8;
+    cursor: pointer;
 }
+
 .icon:hover{
     background-color: rgb(255, 224, 251);
+}
+
+.iconMen{
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-right: 1em;
+    
+    color:#e373c8;
+
+}
+.titleContainer{
+    width: 100%;
+    border-bottom: 1px solid #cacaca;
 }
