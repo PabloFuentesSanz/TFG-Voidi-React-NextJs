@@ -34,3 +34,11 @@
 .nav>div>img {
     height: 45px;
 }
+
+.icon{
+    width: 14px;
+    height: 14px;
+    position: relative;
+    right: 15px;
+   
+}

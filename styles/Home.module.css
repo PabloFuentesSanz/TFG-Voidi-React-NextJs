@@ -1,13 +1,25 @@
 .container {
-	display: flex;
+	display: grid;
+	grid-template-columns:  0.7fr 1.6fr 0.7fr;
+	gap: 0px 80px;
 	background-color: #F3F2EF;
 	height: 93vh;	
 	padding: 3em;
-	padding-left: 10%;
-	padding-right: 10%;
 	overflow: hidden;
-
+	grid-template-areas:
+    "aside main video"
 }
 .page{
 	overflow: hidden;
+}
+
+.video{
+	grid-area: video;
+}
+
+.main{
+	grid-area: main;
+	display: flex;
+	justify-content: center;
+
 }

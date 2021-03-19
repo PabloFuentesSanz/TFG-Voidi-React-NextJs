@@ -5,7 +5,7 @@ import styles from "../../styles/Home.module.css";
 import AsideHome from "../../components/AsideHome";
 import Card from "../../components/Card";
 import { useState } from "react";
-import { updateName} from "../../firebase";
+import { updateName } from "../../firebase";
 import Mensages from "../../components/Mensages";
 
 
@@ -17,12 +17,12 @@ export default function Home() {
 	const user = useUser();
 
 
-	const update = (e) =>{
+	const update = (e) => {
 		e.preventDefault();
 		updateName(name)
 	}
 
-	const dale=(e)=>{
+	const dale = (e) => {
 		e.preventDefault();
 		alert(user.displayName);
 	}
@@ -40,10 +40,14 @@ export default function Home() {
 					<Navbar></Navbar>
 					<div className={styles.container}>
 						<AsideHome name={user.displayName}></AsideHome>
-						<main>
+						<main className={styles.main}>
 							<Card></Card>
-							{/*Hola {user.displayName} esta página aún no está disponible*/}
 						</main>
+						<div className={styles.video}>
+							<video loop width="100%" autoPlay muted  >
+								<source src="voidi.mp4" type="video/mp4" />
+							</video>
+						</div>
 						<Mensages></Mensages>
 					</div>
 					{/*

@@ -1,10 +1,10 @@
 .aside {
     height: 80vh;
-    width: 15vw;
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.32);
     text-align: center;
+    grid-area: aside;
 }
 
 .image {
