@@ -9,13 +9,13 @@ export default function Card() {
         async function getData() {
             const req = [
                 {
-                    job: "Desarrollador web",company: "Zalcu", imgUrl: ""
+                    job: "Desarrollador web", company: "Zalcu", place: "Madrid, España", date: '1 día', imgUrl: ""
                 }, {
-                    job: "Ingeniero Software", company:"Indra" ,imgUrl: ""
+                    job: "Ingeniero Software", company: "Indra", place: "Madrid, España",date: '3 días', imgUrl: ""
                 }, {
-                    job: "FullStack", company:"Accenture" ,imgUrl: ""
+                    job: "FullStack", company: "Accenture", place: "Madrid, España", date: '2 días',imgUrl: ""
                 }, {
-                    job: "Front-end developer",company: "Xiaomi" ,imgUrl: ""
+                    job: "Front-end developer", company: "Xiaomi", place: "Madrid, España",date: '1 día',imgUrl: ""
                 }
             ]
             setPeople(req);
@@ -43,9 +43,13 @@ export default function Card() {
                 >
                     <div
                         className={styles.card}
-                        style={{ backgroundImage: `url(${person.imgUrl})` }}
                     >
-                        <h3 className={styles.personName}>{person.job} ({person.company})</h3>
+                        <div className={styles.row}>
+                            <div className={styles.image} id="img" >
+                            </div>
+                            <h2 className={styles.jobtype}>{person.job}</h2>
+                            <h5 className={styles.company}> {person.company} <span className={styles.place}>{person.place}</span><span className={styles.date}> - hace {person.date}</span></h5>
+                        </div>
                     </div>
                 </TinderCard>
             ))}

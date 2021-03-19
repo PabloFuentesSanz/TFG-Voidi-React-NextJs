@@ -7,6 +7,8 @@ import Card from "../../components/Card";
 import { useState } from "react";
 import { updateName } from "../../firebase";
 import Mensages from "../../components/Mensages";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilter } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -43,10 +45,15 @@ export default function Home() {
 						<main className={styles.main}>
 							<Card></Card>
 						</main>
+						{/*COMPONENTE*/}
 						<div className={styles.video}>
 							<video loop width="100%" autoPlay muted  >
 								<source src="voidi.mp4" type="video/mp4" />
 							</video>
+						</div>
+						{/*COMPONENTE*/}
+						<div className={styles.filters}>
+							<h2><FontAwesomeIcon id="icon" className={styles.icon} icon={faFilter} /> Filtros</h2>
 						</div>
 						<Mensages></Mensages>
 					</div>
