@@ -17,6 +17,15 @@
   border-radius: 20px;
   background-color: aliceblue;
 }
+.textarea__field {
+  font-size: medium;
+  font-weight: 600;
+  width: 100%;
+  padding: 1.2em;
+  margin-bottom: 2em;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
 .btn {
   background-image: linear-gradient(
     to right,

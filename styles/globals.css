@@ -24,11 +24,16 @@ input{
   display: block;
   border: 0px;
 }
-
+textarea{
+  display: block;
+  border: 0px;
+}
 input::placeholder{
   color:rgba(151, 179, 206, 0.658);
 }
-
+textarea::placeholder{
+  color:rgba(151, 179, 206, 0.658);
+}
 button{
   border: 0px;
 }

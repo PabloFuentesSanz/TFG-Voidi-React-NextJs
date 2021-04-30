@@ -18,3 +18,11 @@
     background-size: cover;
     background-position: center;
 }
+.image:hover{
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.file{
+    display:none;
+}

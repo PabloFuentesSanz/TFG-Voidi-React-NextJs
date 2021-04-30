@@ -8,12 +8,11 @@
     box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.32);
     border-radius: 10px;
     transition: 0.5s;
-
+    z-index: 2;
 }
 
 .logout{
     font-family: "Poppins", sans-serif;
-
     position: relative;
     top: 12em;
     color: #e373c8;

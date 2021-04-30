@@ -7,7 +7,6 @@ export default function Form(props) {
 	//Variables usadas en el jsx
 	let type = props.type;
 	let title = "";
-	let userName = "";
 	let pass = "";
 	let style = "";
 	let id = "";
@@ -23,7 +22,6 @@ export default function Form(props) {
 	const [data, setData] = useState({
 		["email" + type]: "",
 		["pass" + type]: "",
-		userName: "",
 	});
 
 
@@ -54,16 +52,6 @@ export default function Form(props) {
 		titleSp = "regístrate";
 		valueEmail = data.emailsign;
 		valuePass = data.passsign;
-		userName = (
-			<input
-				className={styles.input__field}
-				type="text"
-				name="userName"
-				placeholder="Username"
-				onChange={handleInputChange}
-				value={data.userName}
-			/>
-		);
 		style = styles.sign;
 		id = "formSign";
 		textButton = "Regístrate";
@@ -83,10 +71,9 @@ export default function Form(props) {
 					alert(errorMessage);
 				});
 		} else { // SIGN UP WITH MAIL
-			e.preventDefault();
-			signinWithMail(data.userName, data.emailsign, data.passsign)
+			signinWithMail(data.emailsign, data.passsign)
 				.then((user) => {
-					alert("Sign up correcto");
+					router.replace("/register");
 				})
 				.catch((error) => {
 					var errorMessage = error.message;
@@ -100,7 +87,7 @@ export default function Form(props) {
 		e.preventDefault();
 		loginWithGoogle().then((user) => {
 			console.log(user)
-			if (user.additionalUserInfo.isNewUser) {
+			if (user.additionalUserInfo.isNewUser) {//O completo es flase
 				router.replace("/register");
 			} else {
 				router.replace("/home"); //Crear Route en index.js
@@ -111,7 +98,7 @@ export default function Form(props) {
 	//Inicio de sesión por Facebook
 	const handleClickFacebook = (e) => {
 		e.preventDefault();
-		alert("hola");
+		alert("No disponible por el momento");
 	};
 
 	//JSX CODE
@@ -119,8 +106,6 @@ export default function Form(props) {
 		<div className={styles.form__container + ` ` + style} id={id}>
 			<form>
 				<h1 className={styles.title}>{title}</h1>
-
-				{userName}
 				<input
 					className={styles.input__field}
 					type="email"
@@ -133,7 +118,7 @@ export default function Form(props) {
 					className={styles.input__field}
 					type="password"
 					name={`pass${type}`}
-					placeholder="Password"
+					placeholder="Contraseña"
 					onChange={handleInputChange}
 					value={valuePass}
 				/>
