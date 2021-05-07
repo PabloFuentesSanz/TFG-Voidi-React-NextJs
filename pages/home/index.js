@@ -16,19 +16,17 @@ import { faFilter } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
 
-	const router = useRouter();
+	const [userName, setUserName] = useState('');
 	const user = useUser()
-	let currentUser;
-	const redirect = ()=>{
 
-		try{
-			currentUser = getCurrentUser()
-		}catch(UserException){
-			router.push("/register");
-		}
+	const getUser = async () => {
+		const currentUser = await getCurrentUser(user.uid);
+		const { userName } = currentUser.data();
+		setUserName(userName)
 	}
 
-	useEffect(()=> setTimeout(redirect, 100))
+	getUser();
+
 	return (
 		<>
 			<Head>
@@ -40,7 +38,7 @@ export default function Home() {
 				<div className={styles.page}>
 					<Navbar></Navbar>
 					<div className={styles.container}>
-						<AsideHome name={user.displayName}></AsideHome>
+						<AsideHome name={userName}></AsideHome>
 						<main className={styles.main}>
 							<Card></Card>
 						</main>

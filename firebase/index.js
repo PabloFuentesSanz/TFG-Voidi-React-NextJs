@@ -28,7 +28,6 @@ const mapUserFromFirebaseAuth = (user) => {
 //Cuando el estado del usuario cambia
 export const onAuthStateChanged = (setUser) => {
 	return firebase.auth().onAuthStateChanged((user) => {
-		console.log(user)
 		const finalUser = user ? mapUserFromFirebaseAuth(user) : null;
 		setUser(finalUser);
 	});
@@ -59,10 +58,7 @@ export const createUser = (userName, surName, desc, img) => {
 
 
 
-export const getCurrentUser = async () => {
-	let result = 0;
-	const user = auth.currentUser;
-	const uid = user.uid;
+export const getCurrentUser = async (uid) => {
 	const snapshot = await db.collection('Usuarios').where('uid', '==', uid).get();
 	if (snapshot.empty) {
 		throw ("user not register")

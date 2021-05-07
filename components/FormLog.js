@@ -1,5 +1,6 @@
 import styles from "../styles/Log/FormLog.module.css";
 import { loginWithGoogle, loginWithMail, signinWithMail } from "../firebase";
+import { createUser } from "../firebase";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
@@ -73,7 +74,8 @@ export default function Form(props) {
 		} else { // SIGN UP WITH MAIL
 			signinWithMail(data.emailsign, data.passsign)
 				.then((user) => {
-					router.replace("/register");
+					createUser('Anónimo', '', '', '../profile.jpg')
+					router.replace("/home");
 				})
 				.catch((error) => {
 					var errorMessage = error.message;
