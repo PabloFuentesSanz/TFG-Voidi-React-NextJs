@@ -34,13 +34,13 @@ export const onAuthStateChanged = (setUser) => {
 };
 
 //UpdateProfile
-export const updateName = (userName) => {
-	auth.currentUser.updateProfile({
-		displayName: userName
-	}).then(function () {
-		// Update successful.
-	}).catch(function (error) {
-		// An error happened.
+export const updateName = async (name) => {
+	const user = auth.currentUser;
+	const uid = user.uid;
+	const all = await db.collection('Usuarios');
+	const snapshot = await db.collection('Usuarios').where('uid', '==', uid).get()
+	snapshot.forEach(doc => {
+		all.doc(doc.id).update({ userName: name })
 	});
 }
 
@@ -63,7 +63,13 @@ export const getCurrentUser = async (uid) => {
 	if (snapshot.empty) {
 		throw ("user not register")
 	}
-	return snapshot;
+	let array = [];
+	snapshot.forEach(doc => {
+		array.push(doc.data());
+
+	});
+
+	return array[0];
 }
 //Auth con Mail y Contraseña
 export const signinWithMail = (email, password) => {

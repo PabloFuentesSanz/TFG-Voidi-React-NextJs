@@ -74,7 +74,7 @@ export default function Form(props) {
 		} else { // SIGN UP WITH MAIL
 			signinWithMail(data.emailsign, data.passsign)
 				.then((user) => {
-					createUser('Anónimo', '', '', '../profile.jpg')
+					createUser('Nombre Apellidos', '', '', '../profile.jpg')
 					router.replace("/home");
 				})
 				.catch((error) => {
@@ -88,9 +88,9 @@ export default function Form(props) {
 	const handleClickGoogle = (e) => {
 		e.preventDefault();
 		loginWithGoogle().then((user) => {
-			console.log(user)
 			if (user.additionalUserInfo.isNewUser) {//O completo es flase
-				router.replace("/register");
+				createUser(user.additionalUserInfo.profile.name, '', '', '../profile.jpg')
+				router.replace("/home");
 			} else {
 				router.replace("/home"); //Crear Route en index.js
 			}
@@ -100,7 +100,7 @@ export default function Form(props) {
 	//Inicio de sesión por Facebook
 	const handleClickFacebook = (e) => {
 		e.preventDefault();
-		alert("No disponible por el momento");
+		alert("Esta función no está disponible por el momento");
 	};
 
 	//JSX CODE

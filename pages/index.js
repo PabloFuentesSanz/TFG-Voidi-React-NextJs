@@ -8,6 +8,7 @@ import useUser from "../hooks/useUser";
 import { useRouter } from "next/router";
 
 export default function Log() {
+
 	//HOOKS
 	//useRef para hacer referencia a elementos de la página
 	const container = useRef(0);
