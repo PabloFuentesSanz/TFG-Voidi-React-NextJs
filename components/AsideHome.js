@@ -6,17 +6,24 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { updateName } from '../firebase';
 
 
-
 export default function AsideHome(props) {
 
     const [name, setName] = useState({ ...props.name })
+    const [image, setImage] = useState(null);
 
     useEffect(() => {
         setName(props.name)
     }, [props.name])
-
+    
+    
+    const [createObjectURL, setCreateObjectURL] = useState({...props.img});
+    
     useEffect(() => {
-        document.getElementById("imgProfile").style.backgroundImage = "url('" + props.img + "')";
+        setCreateObjectURL(props.img)
+    }, [props.img])
+    
+    useEffect(() => {
+        document.getElementById("imgProfile").style.backgroundImage = "url('" + createObjectURL + "')";
     })
 
     const handleImg = () => {
@@ -41,10 +48,29 @@ export default function AsideHome(props) {
 
     const asideStyle = `${styles.aside} d-none d-sm-block col-sm-3`
 
+    const uploadToClient = (event) => {
+        if (event.target.files && event.target.files[0]) {
+          const i = event.target.files[0];
+    
+          setImage(i);
+          setCreateObjectURL(URL.createObjectURL(i));
+          uploadToServer();
+        }
+      };
+    
+      const uploadToServer = async (event) => {
+        const body = new FormData();
+        body.append("file", image);
+        const response = await fetch("/api/file", {
+          method: "POST",
+          body
+        });
+      };
+
     return (
         <aside className={asideStyle}>
             <form action="" >
-                <input className={styles.file} type="file" id="imgUpload" />
+                <input className={styles.file} type="file" id="imgUpload" accept="image/png, image/jpg, image/jpeg" onChange={uploadToClient}/>
             </form>
             <div className={styles.image} onClick={handleImg} id="imgProfile" >
 
@@ -54,7 +80,7 @@ export default function AsideHome(props) {
             <div class="form-group row p-3">
                 <div className="col-sm-2 "></div>
                 <div className="col-sm-8">
-                    <input className={inputStyle} id="inputName" name="userName" type="text" onClick={handleClick} onBlur={handleBlur} onChange={handleInputChange} value={name} />
+                    <input className={inputStyle} id="inputName" name="userName" type="text" onClick={handleClick} onBlur={handleBlur} onChange={handleInputChange} value={name} ></input>
                 </div>
                 <label className="col-sm-2 control-label"><FontAwesomeIcon id="icon" onClick={handleClick} className={styles.icon} icon={faEdit} /></label>
             </div>
