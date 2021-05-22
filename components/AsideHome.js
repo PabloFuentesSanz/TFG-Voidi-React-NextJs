@@ -3,7 +3,7 @@ import styles from "../styles/Home/AsideHome.module.css";
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
-import { updateName } from '../firebase';
+import { updateName, updateImg } from '../firebase';
 import axios from 'axios';
 
 
@@ -55,7 +55,6 @@ export default function AsideHome(props) {
     
           setImage(i);
           setCreateObjectURL(URL.createObjectURL(i));
-          
           uploadToServer(i);
         
         }
@@ -65,6 +64,8 @@ export default function AsideHome(props) {
         const body = new FormData();
         body.append("file", imagen);
         const response = await axios.post("/api/file", body);
+        alert(response.url)
+        updateImg(response.data.url)
       };
 
     return (

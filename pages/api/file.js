@@ -1,5 +1,4 @@
 import formidable from "formidable";
-import fs from "fs";
 
 export const config = {
   api: {
@@ -9,10 +8,13 @@ export const config = {
 
 const post = async (req, res) =>{
   const form = new formidable.IncomingForm();
-  form.uploadDir="./uploads";
+  form.uploadDir= 'public/uploads';
   form.keepExtensions = true;
   form.parse(req, (err, fields, files) =>{
     console.log(err, fields, files);
+    let ruta = files.file.path.replace("public","");
+    //ruta = ruta.replace('/\' ,`/`)
+    res.status(200).json({url: ruta})
   });
 }
 
