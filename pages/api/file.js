@@ -3,10 +3,20 @@ import fs from "fs";
 
 export const config = {
   api: {
-    bodyParser: false
-  }
+    bodyParser: false,
+  },
 };
 
+const post = async (req, res) =>{
+  const form = new formidable.IncomingForm();
+  form.uploadDir="./uploads";
+  form.keepExtensions = true;
+  form.parse(req, (err, fields, files) =>{
+    console.log(err, fields, files);
+  });
+}
+
+/*
 const post = async (req, res) => {
   const form = new formidable.IncomingForm();
   form.parse(req, async function (err, fields, files) {
@@ -20,8 +30,7 @@ const saveFile = async (file) => {
   fs.writeFileSync(`./public/${file.name}`, data);
   await fs.unlinkSync(file.path);
   return;
-};
-
+};*/
 
 
 export default (req, res) => {

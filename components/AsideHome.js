@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
 import { updateName } from '../firebase';
+import axios from 'axios';
 
 
 export default function AsideHome(props) {
@@ -48,23 +49,22 @@ export default function AsideHome(props) {
 
     const asideStyle = `${styles.aside} d-none d-sm-block col-sm-3`
 
-    const uploadToClient = (event) => {
+    const uploadToClient = async (event) => {
         if (event.target.files && event.target.files[0]) {
           const i = event.target.files[0];
     
           setImage(i);
           setCreateObjectURL(URL.createObjectURL(i));
-          uploadToServer();
+          
+          uploadToServer(i);
+        
         }
       };
     
-      const uploadToServer = async (event) => {
+      const uploadToServer = async (imagen) => {
         const body = new FormData();
-        body.append("file", image);
-        const response = await fetch("/api/file", {
-          method: "POST",
-          body
-        });
+        body.append("file", imagen);
+        const response = await axios.post("/api/file", body);
       };
 
     return (
