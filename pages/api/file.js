@@ -13,7 +13,8 @@ const post = async (req, res) =>{
   form.parse(req, (err, fields, files) =>{
     console.log(err, fields, files);
     let ruta = files.file.path.replace("public","");
-    //ruta = ruta.replace('/\' ,`/`)
+    ruta = ruta.replace((String.fromCharCode(92)) ,(String.fromCharCode(47)) );
+    ruta = ruta.replace((String.fromCharCode(92)) ,(String.fromCharCode(47)) );
     res.status(200).json({url: ruta})
   });
 }
