@@ -64,7 +64,6 @@ export default function AsideHome(props) {
         const body = new FormData();
         body.append("file", imagen);
         const response = await axios.post("/api/file", body);
-        alert(response.url)
         updateImg(response.data.url)
       };
 
