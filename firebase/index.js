@@ -1,6 +1,10 @@
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
+import 'firebase/storage';
+
+
+
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -54,7 +58,11 @@ export const updateImg = async (image) => {
 	});
 }
 
-
+export const uploadImage = (file) => {
+	const ref = firebase.storage().ref(`images/${file.name}`)
+	const task = ref.put(file)
+	return task
+  }
 
 export const createUser = (userName, surName, desc, img) => {
 	const user = auth.currentUser;
