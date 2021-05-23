@@ -11,11 +11,16 @@ export default function AsideHome(props) {
 
     const [name, setName] = useState({ ...props.name })
     const [task, setTask] = useState(null)
-    const [imgURL, setImgURL] = useState(null)
+    const [imgURL, setImgURL] = useState({...props.img})
+
 
     useEffect(() => {
         setName(props.name)
     }, [props.name])
+
+    useEffect(() => {
+        setImgURL(props.img)
+    }, [props.img])
 
     useEffect(() => {
         if (task) {
@@ -23,9 +28,10 @@ export default function AsideHome(props) {
             const onError = () => { }
             const onComplete = () => {
                 console.log("onComplete")
-                task.snapshot.ref.getDownloadURL().then(setImgURL)
-                alert(imgURL)
-                updateImg(imgURL)
+                task.snapshot.ref.getDownloadURL().then(function async (url) {
+                    setImgURL(url)
+                    updateImg(url)
+                })
 
             }
 
@@ -64,7 +70,7 @@ export default function AsideHome(props) {
         if (event.target.files && event.target.files[0]) {
             const i = event.target.files[0];
             await uploadToServer(i);
-            
+
         }
     };
 
