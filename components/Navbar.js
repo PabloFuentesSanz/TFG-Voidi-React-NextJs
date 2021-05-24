@@ -6,7 +6,7 @@ import { useState } from "react";
 
 
 
-export default function Navbar() {
+export default function Navbar(props) {
     const [isUp, setIsUp] = useState(false);
     const handleInfoClick = (e) => {
         if (isUp) {
@@ -27,7 +27,7 @@ export default function Navbar() {
                     <img src="../logo.png" alt="logo" />
                 </div>
                 <div id="perfil" onClick={handleInfoClick} className={styles.perfil}>
-                    <img className={styles.logoPerfil} src="../profile.jpg" alt="logo" />
+                    <img className={styles.logoPerfil} src={props.img} alt="logo" />
                     <FontAwesomeIcon className={styles.icon} icon={faSortDown} />
                 </div>
 

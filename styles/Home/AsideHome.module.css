@@ -8,19 +8,34 @@
 }
 
 .image {
-    background-color: black;
     width: 150px;
     height: 150px;
     border-radius: 100%;
     margin:auto;
     margin-top: 2em;
+    background-color: black;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+ 
 }
 .image:hover{
     cursor: pointer;
-    opacity: 0.3;
+    background-color: black;
+
+}
+
+.image:hover .text {
+    padding-top: 3em;
+    display: inherit;
+
+}   
+
+.text{
+    display: none;
+    padding-top: 3em;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .file{
@@ -43,6 +58,3 @@
     border: 0px !important;
 }
 
-.inputWrite{
-
-}

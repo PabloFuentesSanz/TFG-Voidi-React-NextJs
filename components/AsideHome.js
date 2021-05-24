@@ -3,20 +3,24 @@ import styles from "../styles/Home/AsideHome.module.css";
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from '@fortawesome/free-solid-svg-icons'
-import { updateName, uploadImage, updateImg } from '../firebase';
-import axios from 'axios';
+import { updateName, uploadImage, updateImg, updateDesc } from '../firebase';
 
 
 export default function AsideHome(props) {
 
     const [name, setName] = useState({ ...props.name })
+    const [desc, setDesc] = useState({ ...props.desc })
     const [task, setTask] = useState(null)
-    const [imgURL, setImgURL] = useState({...props.img})
+    const [imgURL, setImgURL] = useState({ ...props.img })
 
 
     useEffect(() => {
         setName(props.name)
     }, [props.name])
+
+    useEffect(() => {
+        setDesc(props.desc)
+    }, [props.desc])
 
     useEffect(() => {
         setImgURL(props.img)
@@ -28,7 +32,7 @@ export default function AsideHome(props) {
             const onError = () => { }
             const onComplete = () => {
                 console.log("onComplete")
-                task.snapshot.ref.getDownloadURL().then(function async (url) {
+                task.snapshot.ref.getDownloadURL().then(function async(url) {
                     setImgURL(url)
                     updateImg(url)
                 })
@@ -53,9 +57,17 @@ export default function AsideHome(props) {
         updateName(name)
     }
 
+    const handleDescBlur = () => {
+        updateDesc(desc)
+    }
+
     function handleClick() {
         const input = document.getElementById("inputName")
         input.focus()
+    }
+
+    const handleDescChange = (e) => {
+        setDesc(e.target.value)
     }
 
     const handleInputChange = (e) => {
@@ -77,6 +89,7 @@ export default function AsideHome(props) {
     const uploadToServer = async (imagen) => {
         const task = uploadImage(imagen)
         setTask(task)
+        document.getElementById("imgProfile").dispatchEvent(new MouseEvent("blur"));
     };
 
     return (
@@ -85,7 +98,7 @@ export default function AsideHome(props) {
                 <input className={styles.file} type="file" id="imgUpload" accept="image/png, image/jpg, image/jpeg" onChange={uploadToClient} />
             </form>
             <div className={styles.image} onClick={handleImg} id="imgProfile" >
-
+                <p className={styles.text}>Cambiar foto</p>
             </div>
 
 
@@ -95,9 +108,9 @@ export default function AsideHome(props) {
                     <input className={inputStyle} id="inputName" name="userName" type="text" onClick={handleClick} onBlur={handleBlur} onChange={handleInputChange} value={name} ></input>
                 </div>
                 <label className="col-sm-2 control-label"><FontAwesomeIcon id="icon" onClick={handleClick} className={styles.icon} icon={faEdit} /></label>
-            </div>
+                <textarea className="form-control mt-3 " id="description" onBlur={handleDescBlur} rows="7" onChange={handleDescChange} value={desc}></textarea>
 
-            <p>{props.desc}</p>
+            </div>
         </aside>
     );
 }

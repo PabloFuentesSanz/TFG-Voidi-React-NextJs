@@ -48,6 +48,16 @@ export const updateName = async (name) => {
 	});
 }
 
+export const updateDesc = async (description) => {
+	const user = auth.currentUser;
+	const uid = user.uid;
+	const all = await db.collection('Usuarios');
+	const snapshot = await db.collection('Usuarios').where('uid', '==', uid).get()
+	snapshot.forEach(doc => {
+		all.doc(doc.id).update({ desc: description })
+	});
+}
+
 export const updateImg = async (image) => {
 	const user = auth.currentUser;
 	const uid = user.uid;
@@ -62,7 +72,7 @@ export const uploadImage = (file) => {
 	const ref = firebase.storage().ref(`images/${file.name}`)
 	const task = ref.put(file)
 	return task
-  }
+}
 
 export const createUser = (userName, surName, desc, img) => {
 	const user = auth.currentUser;

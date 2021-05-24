@@ -10,11 +10,20 @@
     transition: 0.5s;
     z-index: 2;
 }
-
+.options{
+    font-family: "Poppins", sans-serif;
+   background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    margin: auto;
+    width: 100%;
+    border-bottom: 1px solid #cacaca;
+    padding: 0.5em;
+}
 .logout{
     font-family: "Poppins", sans-serif;
     position: relative;
-    top: 12em;
+    top: 7.5em;
     color: #e373c8;
     background-color: transparent;
     font-size: 16px;
@@ -31,5 +40,7 @@
     width: 20px;
     height: 20px;
     margin-left: 0.5em;
+    margin-bottom: 0.3em;
+    margin-right: 0.5em;
 }
 

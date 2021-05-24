@@ -19,11 +19,12 @@
     float: right;
     width: 35px;
     height: 35px;
-    margin-right: 1em;
+    margin-right: 0.5em;
     padding: 5px;
     border-radius: 50%;
     color:#e373c8;
     cursor: pointer;
+    margin-top: 3px;
 }
 
 .icon:hover{
@@ -34,9 +35,9 @@
     float: left;
     width: 25px;
     height: 25px;
-    margin-right: 1em;
+    margin-right: 0.5em;
     color:#e373c8;
-
+    margin-top: 6px;
 }
 .titleContainer{
     width: 100%;

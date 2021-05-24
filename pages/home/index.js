@@ -50,14 +50,14 @@ export default function Home() {
 			{user && (
 				<div className={styles.page}>
 
-					<Navbar></Navbar>
+					<Navbar img={userImg}></Navbar>
 					<div className={containerStyle}>
 						<AsideHome name={name} img={userImg} desc={userDesc}></AsideHome>
 						<main className={cardStyle}>
 							<Card></Card>
 						</main>
 						{/*COMPONENTE Publi*/}
-						<div className="col-sm-2">
+						<div className="col-sm-3">
 							<div className={videoStyle}>
 								<video loop width="100%" autoPlay muted  >
 									<source src="voidi.mp4" type="video/mp4" />
@@ -65,7 +65,7 @@ export default function Home() {
 							</div>
 							{/*COMPONENTE Filtros*/}
 							<div className={filterStyle}>
-								<h2><FontAwesomeIcon id="icon" className={styles.icon} icon={faFilter} /> Filtros</h2>
+								<h4><FontAwesomeIcon id="icon" className={styles.icon} icon={faFilter} /> Filtros</h4>
 							</div>
 						</div>
 						<Mensages></Mensages>
