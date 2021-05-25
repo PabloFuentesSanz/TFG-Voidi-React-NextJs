@@ -86,7 +86,21 @@ export const createUser = (userName, surName, desc, img) => {
 	})
 }
 
+export const getAllOffers = async () => {
+	const snapshot = await db.collection('Ofertas').get();
+	if (snapshot.empty) {
+		throw ("user not register")
+	}
+	let array = [];
 
+	snapshot.forEach(doc => {
+		const json = doc
+		console.log(json)
+		array.push(json);
+	});
+
+	return array;
+}
 
 export const getCurrentUser = async (uid) => {
 	const snapshot = await db.collection('Usuarios').where('uid', '==', uid).get();

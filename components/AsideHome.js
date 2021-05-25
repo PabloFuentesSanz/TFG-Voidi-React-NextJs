@@ -76,7 +76,7 @@ export default function AsideHome(props) {
 
     const inputStyle = `${styles.inputRead} form-control`
 
-    const asideStyle = `${styles.aside} d-none d-sm-block col-sm-3`
+    const asideStyle = `${styles.aside} d-none d-sm-none d-md-block col-sm-3`
 
     const uploadToClient = async (event) => {
         if (event.target.files && event.target.files[0]) {
@@ -102,7 +102,7 @@ export default function AsideHome(props) {
             </div>
 
 
-            <div class="form-group row p-3">
+            <div className="form-group row p-3">
                 <div className="col-sm-2 "></div>
                 <div className="col-sm-8">
                     <input className={inputStyle} id="inputName" name="userName" type="text" onClick={handleClick} onBlur={handleBlur} onChange={handleInputChange} value={name} ></input>

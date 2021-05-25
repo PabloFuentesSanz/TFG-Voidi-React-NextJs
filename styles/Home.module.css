@@ -36,3 +36,15 @@
 	margin-right: 0.2em;
 	margin-bottom: 5px;
 }
+
+.iconWait{
+	width: 34px;
+	height: 34px;
+	color: #e373c8;
+	margin-right: 0.2em;
+	margin-bottom: 5px;
+}
+.noMore{
+	text-align: center;
+	margin-top: 10em;
+}

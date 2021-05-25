@@ -21,14 +21,13 @@
 	font-family: "Poppins", sans-serif;
 	padding: 10px;
 	text-shadow: 4px;
-	grid-area: Puesto;
 	padding: 0;
 	margin-bottom: 0;
+	font-size: 2em;
 }
 
 .company {
 	font-family: "Poppins", sans-serif;
-	grid-area: Empresa;
 	padding: 0;
 	margin-top: 5px;
 	color: #e373c8;
@@ -46,7 +45,6 @@
 }
 
 .image {
-	grid-area: img;
 	background-color: black;
 	width: 100px;
 	height: 100px;
@@ -56,10 +54,7 @@
 	background-position: center;
 }
 
-.row {
-	display: grid;
-	grid-template-columns: 0.5fr 1.7fr;
-	grid-template-rows: 0.8fr 1.2fr 1fr;
-	gap: 0px 1em;
-	grid-template-areas: "img Puesto" "img Empresa" ". .";
+.text{
+	margin-left: 2em;
+	
 }

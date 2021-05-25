@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 import { getCurrentUser } from "../../firebase";
 import Mensages from "../../components/Mensages";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFilter } from '@fortawesome/free-solid-svg-icons'
+import { faFilter, faHourglassHalf } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -36,9 +36,9 @@ export default function Home() {
 	getUser();
 
 	const containerStyle = `${styles.container} row`
-	const videoStyle = `${styles.video} d-none d-sm-block`
-	const filterStyle = `${styles.filters} d-none d-sm-block `
-	const cardStyle = `${styles.main} col-12 col-sm-6`
+	const videoStyle = `${styles.video} d-none d-sm-none d-md-block`
+	const filterStyle = `${styles.filters} d-none d-sm-none d-md-block`
+	const cardStyle = `${styles.main} col-sm-12 col-md-6`
 
 	return (
 		<>
@@ -55,6 +55,11 @@ export default function Home() {
 						<AsideHome name={name} img={userImg} desc={userDesc}></AsideHome>
 						<main className={cardStyle}>
 							<Card></Card>
+							<div className={styles.noMore}>
+								<p>De momento no tenemos más ofertas para usted.</p>
+								<p>Descanse mientras buscamos las últimas ofertas que mejor se ajusten a sus gustos.</p>
+								<p><FontAwesomeIcon id="icon" className={styles.iconWait} icon={faHourglassHalf} /> </p>
+							</div>
 						</main>
 						{/*COMPONENTE Publi*/}
 						<div className="col-sm-3">
@@ -70,6 +75,7 @@ export default function Home() {
 						</div>
 						<Mensages></Mensages>
 					</div>
+
 				</div>
 			)}
 			{user === USER_STATES.NOT_KNOWN && <p>Cargando</p>}

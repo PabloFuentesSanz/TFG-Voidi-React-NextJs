@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 import useUser from "../hooks/useUser";
 import { useRouter } from "next/router";
 
+
 export default function Log() {
 
 	//HOOKS
