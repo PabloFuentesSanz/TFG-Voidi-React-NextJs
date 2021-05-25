@@ -6,6 +6,8 @@ import ModalOffer from '../components/ModalOffer.js'
 export default function Card() {
     const [people, setPeople] = useState([]);
 
+
+
     useEffect(() => {
         async function getData() {
 
@@ -27,8 +29,7 @@ export default function Card() {
     };
 
     const rowStyle = `${styles.row} row`
-    const imgStyle = `${styles.image} col-4`
-    const textStyle = `${styles.text} col-6`
+    const textStyle = `${styles.text} col-8`
 
 
 
@@ -47,7 +48,10 @@ export default function Card() {
                             className={styles.card}
                         >
                             <div className={rowStyle}>
-                                <div className={imgStyle} id="img" >
+                                <div className="col-2">
+                                    <div className={styles.image} id="img"  >
+                                    </div>
+                                    <img src={person.data().img}></img>
                                 </div>
                                 <div className={textStyle}>
                                     <h2 className={styles.jobtype}>{person.data().job}</h2>
@@ -56,9 +60,9 @@ export default function Card() {
                                 <p className="mt-5">{person.data().desc}</p>
 
                             </div>
+                            <ModalOffer id={person.id} company={person.data().company} job={person.data().job} desc={person.data().desc} place={person.data().place} date={person.data().date}></ModalOffer>
                         </div>
 
-                        <ModalOffer id={person.id} company={person.data().company} job={person.data().job} desc={person.data().desc} place={person.data().place} date={person.data().date}></ModalOffer>
                     </TinderCard>
                 </>
             ))}

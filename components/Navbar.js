@@ -32,7 +32,7 @@ export default function Navbar(props) {
                 </div>
 
             </nav>
-            <Info></Info>
+            <Info name={props.name}></Info>
         </>
     );
 }

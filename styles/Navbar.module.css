@@ -35,11 +35,15 @@
     height: 45px;
 }
 
-.icon{
+.icon {
     width: 14px;
     height: 14px;
     position: relative;
     right: 15px;
-    color:#e373c8;
+    color: #e373c8;
     top: 15px;
+}
+
+.name {
+    padding: 1em;
 }

@@ -108,7 +108,7 @@ export default function AsideHome(props) {
                     <input className={inputStyle} id="inputName" name="userName" type="text" onClick={handleClick} onBlur={handleBlur} onChange={handleInputChange} value={name} ></input>
                 </div>
                 <label className="col-sm-2 control-label"><FontAwesomeIcon id="icon" onClick={handleClick} className={styles.icon} icon={faEdit} /></label>
-                <textarea className="form-control mt-3 " id="description" onBlur={handleDescBlur} rows="7" onChange={handleDescChange} value={desc}></textarea>
+                <textarea placeholder="Presentate a los ofertantes aquí..." className="form-control mt-3 " id="description" onBlur={handleDescBlur} rows="7" onChange={handleDescChange} value={desc}></textarea>
 
             </div>
         </aside>

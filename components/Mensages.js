@@ -19,8 +19,9 @@ export default function Mensages() {
             setIsUp(true);
         }
     }
+    const msgStyle = `${styles.msg} d-none d-sm-block`
     return (
-        <div className={styles.msg} id="mensages">
+        <div className={msgStyle} id="mensages">
             <div className={styles.titleContainer}>
                 <h4 className={styles.title}><FontAwesomeIcon id="icon" className={styles.iconMen} icon={faEnvelope} /> Mensajes <FontAwesomeIcon id="icon" className={styles.icon} onClick={handleArrowClick} icon={icon} /></h4>
             </div>

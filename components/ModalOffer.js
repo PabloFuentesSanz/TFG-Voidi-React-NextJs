@@ -1,6 +1,9 @@
 import { Button } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
 import { useState } from 'react';
+import styles from "../styles/Home/Card.module.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown, faAngleUp, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export default function ModalOffer(props) {
     const [show, setShow] = useState(false);
@@ -9,9 +12,9 @@ export default function ModalOffer(props) {
     const handleShow = () => setShow(true);
 
     return (
-        <>
-            <Button variant="primary" onClick={handleShow}>
-                Ver más
+        <div className={styles.modal}>
+            <Button className={styles.button} variant="primary" onClick={handleShow}>
+                <p><FontAwesomeIcon id="icon" className={styles.iconMore} icon={faAngleUp} /> Ver más</p>
             </Button>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header >
@@ -28,6 +31,6 @@ export default function ModalOffer(props) {
 
                 </Modal.Footer>
             </Modal>
-        </>
+        </div>
     );
 }

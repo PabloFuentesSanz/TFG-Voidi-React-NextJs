@@ -50,7 +50,7 @@ export default function Home() {
 			{user && (
 				<div className={styles.page}>
 
-					<Navbar img={userImg}></Navbar>
+					<Navbar img={userImg} name={name}></Navbar>
 					<div className={containerStyle}>
 						<AsideHome name={name} img={userImg} desc={userDesc}></AsideHome>
 						<main className={cardStyle}>

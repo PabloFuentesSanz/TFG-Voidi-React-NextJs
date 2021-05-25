@@ -102,6 +102,7 @@ export const getAllOffers = async () => {
 	return array;
 }
 
+
 export const getCurrentUser = async (uid) => {
 	const snapshot = await db.collection('Usuarios').where('uid', '==', uid).get();
 	if (snapshot.empty) {

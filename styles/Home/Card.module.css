@@ -16,7 +16,6 @@
 	width: 97%;
 }
 
-
 .jobtype {
 	font-family: "Poppins", sans-serif;
 	padding: 10px;
@@ -46,15 +45,88 @@
 
 .image {
 	background-color: black;
-	width: 100px;
-	height: 100px;
 	border-radius: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
-.text{
-	margin-left: 2em;
-	
+.text {
+	padding-left: 3.2em;
+}
+
+.modal {
+	position: absolute;
+	bottom: 10px;
+	right: 45%;
+}
+
+.button {
+	background-color: transparent;
+	border: 0px;
+}
+
+.button:hover {
+	background-color: transparent;
+	border: 0px;
+}
+
+.button:focus {
+	background-color: transparent;
+	border: 0px;
+}
+
+.button:active {
+	background-color: transparent !important;
+	border: 0px !important;
+}
+
+.iconMore {
+	width: 15px;
+	margin-bottom: 4px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+	.image {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+	.image {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+	.image {
+		width: 60px;
+		height: 60px;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+	.image {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+	.image {
+		width: 100px;
+		height: 100px;
+	}
 }
