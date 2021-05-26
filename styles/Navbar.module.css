@@ -47,3 +47,14 @@
 .name {
     padding: 1em;
 }
+
+@media only screen and (max-width: 600px) {
+    .logoIzq {
+        padding-left: 0em;
+        margin-left: -2em;
+    }
+    .perfil {
+        padding-right: 0em;
+        margin-right: -2em;
+    }
+}

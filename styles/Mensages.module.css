@@ -1,4 +1,4 @@
-.msg{
+.msg {
     position: absolute;
     right: 3em;
     bottom: 0;
@@ -11,35 +11,37 @@
     transition: 0.5s;
 }
 
-.title{
+.title {
     margin-left: 1em;
     margin-top: 10px;
 }
-.icon{
+
+.icon {
     float: right;
     width: 35px;
     height: 35px;
     margin-right: 0.5em;
     padding: 5px;
     border-radius: 50%;
-    color:#e373c8;
+    color: #e373c8;
     cursor: pointer;
     margin-top: 3px;
 }
 
-.icon:hover{
+.icon:hover {
     background-color: rgb(255, 224, 251);
 }
 
-.iconMen{
+.iconMen {
     float: left;
     width: 25px;
     height: 25px;
     margin-right: 0.5em;
-    color:#e373c8;
+    color: #e373c8;
     margin-top: 6px;
 }
-.titleContainer{
+
+.titleContainer {
     width: 100%;
     border-bottom: 1px solid #cacaca;
 }

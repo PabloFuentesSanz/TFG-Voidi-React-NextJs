@@ -5,7 +5,7 @@
 	height: 80vh;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
-	box-shadow: inset 2px -108px 49px -44px rgba(0, 0, 0, 0.75);
+	box-shadow: inset 2px -108px 49px -44px rgba(0, 0, 0, 0.75), 5px 5px 17px -2px #6B6B6B;
 	background-size: cover;
 	background-position: center;
 	width: 100%;
@@ -22,7 +22,17 @@
 	text-shadow: 4px;
 	padding: 0;
 	margin-bottom: 0;
-	font-size: 2em;
+	height: 58px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.desc {
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 310px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .company {
