@@ -11,11 +11,15 @@ export default function ModalOffer(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+
+
     return (
         <div className={styles.modal}>
-            <Button className={styles.button} variant="primary" onClick={handleShow}>
-                <p><FontAwesomeIcon id="icon" className={styles.iconMore} icon={faAngleUp} /> Ver más</p>
-            </Button>
+            <span onTouchStart={handleShow}>
+                <Button className={styles.button} variant="primary" onClick={handleShow} >
+                    <p><FontAwesomeIcon id="icon" className={styles.iconMore} icon={faAngleUp} /> Ver más</p>
+                </Button>
+            </span>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header >
                     <Modal.Title>{props.job}</Modal.Title>

@@ -59,11 +59,13 @@
 	position: absolute;
 	bottom: 10px;
 	right: 45%;
+	cursor: pointer;
 }
 
 .button {
 	background-color: transparent;
 	border: 0px;
+	cursor: pointer;
 }
 
 .button:hover {
@@ -92,6 +94,24 @@
 	.image {
 		width: 40px;
 		height: 40px;
+	}
+	.card {
+		width: 100%;
+	}
+	.swipe {
+		width: 105%;
+		margin-left: -1.2em;
+	}
+	.modal {
+		position: absolute;
+		bottom: 10px;
+		right: 35%;
+		z-index: 20;
+		cursor: 'pointer';
+	}
+	.button {
+		position: relative;
+		cursor: 'pointer';
 	}
 }
 

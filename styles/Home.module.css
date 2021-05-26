@@ -23,13 +23,15 @@
 	box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.32);
 	max-height: 50vh;
 	border-radius: 10px;
-	padding:1em;
+	padding: 1em;
 }
-.filters >h2{
-	padding-top:0;
-	margin-top:0;
+
+.filters>h2 {
+	padding-top: 0;
+	margin-top: 0;
 }
-.icon{
+
+.icon {
 	width: 17px;
 	height: 17px;
 	color: #e373c8;
@@ -37,14 +39,40 @@
 	margin-bottom: 5px;
 }
 
-.iconWait{
+.iconWait {
 	width: 34px;
 	height: 34px;
 	color: #e373c8;
 	margin-right: 0.2em;
 	margin-bottom: 5px;
 }
-.noMore{
+
+.noMore {
 	text-align: center;
 	margin-top: 10em;
 }
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+	.main {
+		height: 100vh;
+		width: 100%;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {}

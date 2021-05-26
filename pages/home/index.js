@@ -38,7 +38,7 @@ export default function Home() {
 	const containerStyle = `${styles.container} row`
 	const videoStyle = `${styles.video} d-none d-sm-none d-md-block`
 	const filterStyle = `${styles.filters} d-none d-sm-none d-md-block`
-	const cardStyle = `${styles.main} col-sm-12 col-md-6`
+	const cardStyle = `${styles.main} col-12 col-sm-12 col-md-6`
 
 	return (
 		<>
