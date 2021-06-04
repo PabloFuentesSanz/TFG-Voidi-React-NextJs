@@ -22,7 +22,7 @@
 	text-shadow: 4px;
 	padding: 0;
 	margin-bottom: 0;
-	height: 58px;
+	max-height: 58px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
@@ -30,7 +30,7 @@
 .desc {
 	padding-left: 1em;
 	padding-right: 1em;
-	height: 310px;
+	height: 315px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }

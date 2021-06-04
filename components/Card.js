@@ -21,11 +21,15 @@ export default function Card() {
     }, []);
 
     const swiped = (dir, name) => {
-        console.log("removing" + name);
+        if(dir == 'left'){
+            console.log("Rechazada la oferta " + name)
+        }else{
+            console.log("Aceptada la oferta " + name)
+        }
     };
 
     const outOfFrame = (name) => {
-        console.log(name + "left the screen");
+        console.log(name + " left the screen");
     };
 
     const rowStyle = `${styles.row} row`
@@ -56,8 +60,8 @@ export default function Card() {
                                 <h6 className={styles.company}> {person.data().company} <span className={styles.place}>{person.data().place}</span><span className={styles.date}> - publicada el {person.data().date}</span></h6>
                             </div>
                             <div className={styles.desc}>
-
-                                <p className="mt-4">{person.data().desc}</p>
+                                <h5 className="mt-4">Acerca del empleo</h5>
+                                <p>{person.data().desc}</p>
                             </div>
 
                         </div>

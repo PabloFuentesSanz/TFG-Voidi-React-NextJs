@@ -19,7 +19,7 @@ export default function Mensages() {
             setIsUp(true);
         }
     }
-    const msgStyle = `${styles.msg} d-none d-sm-block`
+    const msgStyle = `${styles.msg} d-none d-sm-none d-md-block`
     return (
         <div className={msgStyle} id="mensages">
             <div className={styles.titleContainer}>

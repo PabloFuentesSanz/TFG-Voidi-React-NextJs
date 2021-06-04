@@ -119,9 +119,6 @@ export const getCurrentUser = async (uid) => {
 //Auth con Mail y Contraseña
 export const signinWithMail = (email, password) => {
 	return auth.createUserWithEmailAndPassword(email, password);
-	/*return auth.currentUser.updateProfile({
-		displayName: userName,
-	});*/
 };
 
 export const loginWithMail = (email, password) => {

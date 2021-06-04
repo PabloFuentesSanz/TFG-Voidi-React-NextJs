@@ -98,7 +98,7 @@ export default function AsideHome(props) {
                 <input className={styles.file} type="file" id="imgUpload" accept="image/png, image/jpg, image/jpeg" onChange={uploadToClient} />
             </form>
             <div className={styles.image} onClick={handleImg} id="imgProfile" >
-                <p className={styles.text}>Cambiar foto</p>
+                <p className={styles.text}><FontAwesomeIcon id="icon" onClick={handleClick} className={styles.icon} icon={faEdit} /></p>
             </div>
 
 
