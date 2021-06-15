@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react";
 
+import Link from 'next/link'
 
 
 export default function Navbar(props) {
@@ -24,7 +25,10 @@ export default function Navbar(props) {
         <>
             <nav className={styles.nav}>
                 <div className={styles.logoIzq}>
-                    <img src="../logo.png" alt="logo" />
+                    <Link href="/">
+
+                        <img src="../logo.png" alt="logo" />
+                    </Link>
                 </div>
                 <div id="perfil" onClick={handleInfoClick} className={styles.perfil}>
                     <img className={styles.logoPerfil} src={props.img} alt="logo" />

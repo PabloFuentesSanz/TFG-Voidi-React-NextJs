@@ -57,7 +57,7 @@ export default function Card() {
                             </div>
                             <div className={textStyle}>
                                 <h4 className={styles.jobtype}>{person.data().job}</h4>
-                                <h6 className={styles.company}> {person.data().company} <span className={styles.place}>{person.data().place}</span><span className={styles.date}> - publicada el {person.data().date}</span></h6>
+                                <h6 className={styles.company}> {person.data().company} <span className={styles.place}>{person.data().place}</span><span className={styles.date}> - publicada el {person.data().date} - </span>{person.data().wage}</h6>
                             </div>
                             <div className={styles.desc}>
                                 <h5 className="mt-4">Acerca del empleo</h5>

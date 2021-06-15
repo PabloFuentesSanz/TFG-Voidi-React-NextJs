@@ -3,10 +3,9 @@ import useUser, { USER_STATES } from "../../hooks/useUser";
 import Navbar from "../../components/Navbar";
 import styles from "../../styles/Home.module.css";
 import AsideHome from "../../components/AsideHome";
+import Carga from "../../components/Carga";
 import Card from "../../components/Card";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import InputRange from 'react-input-range';
+import {useState } from "react";
 
 
 import Select from 'react-select';
@@ -126,7 +125,7 @@ export default function Home() {
 
 				</div>
 			)}
-			{user === USER_STATES.NOT_KNOWN && <p>Cargando</p>}
+			{user === USER_STATES.NOT_KNOWN && <Carga></Carga>}
 		</>
 	);
 }

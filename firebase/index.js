@@ -137,3 +137,23 @@ export const loginWithGoogle = () => {
 };
 
 //Auth con Facebook
+
+
+
+//Filtros
+
+export const filter = async (keyword, categories, wage, city) => {
+	const snapshot = await db.collection('Ofertas').where('city', '==', city).get();
+	if (snapshot.empty) {
+		throw ("user not register")
+	}
+	let array = [];
+
+	snapshot.forEach(doc => {
+		const json = doc
+		console.log(json)
+		array.push(json);
+	});
+
+	return array;
+};

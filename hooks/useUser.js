@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { onAuthStateChanged,getCurrentUser } from "../firebase";
+import { onAuthStateChanged} from "../firebase";
 import { useRouter } from "next/router";
 
 export const USER_STATES = {
@@ -19,6 +19,5 @@ export default  function useUser() {
   }, [user]);
 
  
-
   return user;
 }

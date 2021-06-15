@@ -75,8 +75,11 @@ export default function AsideHome(props) {
     };
 
     const inputStyle = `${styles.inputRead} form-control`
+    let asideStyle = `${styles.aside} d-none d-sm-none d-md-block col-sm-3`
 
-    const asideStyle = `${styles.aside} d-none d-sm-none d-md-block col-sm-3`
+    if (props.edit) {
+        asideStyle = `${styles.asideEdit} col-xs-12 col-sm-12 col-md-6 `
+    }
 
     const uploadToClient = async (event) => {
         if (event.target.files && event.target.files[0]) {
