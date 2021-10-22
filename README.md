@@ -12,7 +12,7 @@ Demo Online disponible en https://voidi.vercel.app/
 ![image](https://user-images.githubusercontent.com/51823158/138513086-78a669f7-b54a-495e-8cee-cd14d52c4185.png)
 
 
-Este es un proyecto [Next.js](https://nextjs.org/) arrancado con [`npx create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este es un proyecto [Next.js](https://nextjs.org/) y [Firebase](https://firebase.google.com/) arrancado con [`npx create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
