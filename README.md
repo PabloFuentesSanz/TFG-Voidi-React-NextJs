@@ -1,4 +1,6 @@
-# Trabajo de Fin de Grado de Ingeniería de Software en la UPM (ETSISI).
+# VOIDI - Trabajo de Fin de Grado de Ingeniería de Software en la UPM (ETSISI).
+
+Este proyecto se basa en una aplicación de búsqueda de empleo con un sistema de swipe tipo Tinder.
 
 Demo Online disponible en https://voidi.vercel.app/
 
